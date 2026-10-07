@@ -1,0 +1,956 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Itxaso Gurrea | Coach Ejecutiva y de Vida</title>
+  <meta name="description" content="Tarjeta de presentación digital de Itxaso Gurrea. Treinta años acompañando tus cambios vitales y profesionales.">
+  
+  <!-- Favicon e icono del navegador con estética verde bosque y naranja ámbar -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%230e2318'/><circle cx='50' cy='50' r='38' fill='none' stroke='%23ff6600' stroke-width='6'/><text x='50%' y='55%' dominant-baseline='middle' text-anchor='middle' font-family='sans-serif' font-size='38' font-weight='800' fill='%23ff7a1a'>IG</text></svg>">
+  
+  <!-- Tipografía Editorial de Alta Gama: Space Grotesk & Space Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Outfit:wght@600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    /* ==========================================================================
+       PALETA Y VARIABLES DE DISEÑO (Editorial Forest Green & Amber/Orange)
+       Inspirado en estética de alta costura, cristal acanalado y diseño brutalista-chic
+       ========================================================================== */
+    :root {
+      --bg-forest-deep: #07150e;
+      --bg-forest: #0d2116;
+      --bg-forest-card: rgba(10, 26, 18, 0.85);
+      --amber-orange: #ff6600;
+      --amber-orange-glow: #ff7d1a;
+      --amber-orange-dark: #cc5200;
+      --amber-gradient: linear-gradient(135deg, #ff7a1a 0%, #ff5500 50%, #d94100 100%);
+      --text-white: #f8fafc;
+      --text-light: #e2e8f0;
+      --text-muted: #8ca394;
+      --border-subtle: rgba(255, 102, 0, 0.22);
+      --border-subtle-hover: rgba(255, 102, 0, 0.6);
+      --item-bg: rgba(18, 42, 30, 0.55);
+      --item-hover: rgba(26, 58, 42, 0.8);
+      --radius-sm: 8px;
+      --radius-md: 14px;
+      --radius-lg: 20px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    body {
+      font-family: 'Space Grotesk', -apple-system, BlinkMacSystemFont, sans-serif;
+      background-color: var(--bg-forest-deep);
+      color: var(--text-white);
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 24px 16px;
+      position: relative;
+      overflow-x: hidden;
+      line-height: 1.5;
+    }
+
+    /* Fondo artístico con textura fotográfica y caída de luz */
+    .bg-artwork {
+      position: fixed;
+      inset: 0;
+      background-image: 
+        radial-gradient(circle at 80% 20%, rgba(255, 102, 0, 0.25) 0%, transparent 50%),
+        radial-gradient(circle at 15% 85%, rgba(13, 33, 22, 0.9) 0%, transparent 60%),
+        url('bg-art.jpg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      filter: brightness(0.65) contrast(1.15);
+      z-index: 0;
+      pointer-events: none;
+    }
+
+    /* Textura de cristal acanalado vertical (Fluted Glass / Reeded Lines) */
+    .fluted-overlay {
+      position: fixed;
+      inset: 0;
+      background: repeating-linear-gradient(
+        90deg,
+        rgba(255, 255, 255, 0.02) 0px,
+        rgba(255, 255, 255, 0.02) 2px,
+        rgba(0, 0, 0, 0.04) 2px,
+        rgba(0, 0, 0, 0.04) 6px
+      );
+      z-index: 0;
+      pointer-events: none;
+      opacity: 0.6;
+    }
+
+    /* Tarjeta principal con cristal ahumado y borde editorial */
+    .card-container {
+      position: relative;
+      z-index: 1;
+      width: 100%;
+      max-width: 440px;
+      background: var(--bg-forest-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-lg);
+      backdrop-filter: blur(28px);
+      -webkit-backdrop-filter: blur(28px);
+      box-shadow: 
+        0 25px 60px -15px rgba(0, 0, 0, 0.85),
+        0 0 45px -10px rgba(255, 102, 0, 0.18),
+        inset 0 1px 1px rgba(255, 255, 255, 0.1);
+      padding: 32px 24px 26px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    /* Barra Superior Editorial */
+    .card-header-bar {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 16px;
+      padding-bottom: 12px;
+      border-bottom: 1px dashed rgba(255, 102, 0, 0.25);
+    }
+
+    .editorial-tag {
+      font-family: 'Space Mono', monospace;
+      font-size: 0.72rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--amber-orange-glow);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .editorial-tag .slash {
+      color: var(--text-muted);
+      font-weight: 300;
+    }
+
+    .header-actions {
+      display: flex;
+      gap: 8px;
+    }
+
+    .header-btn {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      color: var(--text-light);
+      width: 36px;
+      height: 36px;
+      border-radius: var(--radius-sm);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .header-btn:hover {
+      background: rgba(255, 102, 0, 0.2);
+      border-color: var(--amber-orange);
+      color: var(--amber-orange-glow);
+      transform: translateY(-2px);
+    }
+
+    /* Avatar e Iniciales IG con cristal acanalado y aura ámbar */
+    .avatar-wrapper {
+      position: relative;
+      margin: 10px 0 20px;
+    }
+
+    .avatar-glow {
+      position: absolute;
+      inset: -6px;
+      border-radius: 50%;
+      background: var(--amber-gradient);
+      opacity: 0.75;
+      filter: blur(12px);
+      z-index: 0;
+      animation: pulseAura 4s ease-in-out infinite alternate;
+    }
+
+    @keyframes pulseAura {
+      0% { opacity: 0.45; transform: scale(0.96); }
+      100% { opacity: 0.85; transform: scale(1.04); }
+    }
+
+    .avatar {
+      position: relative;
+      z-index: 1;
+      width: 110px;
+      height: 110px;
+      border-radius: 50%;
+      background: radial-gradient(circle at 40% 30%, #173827 0%, #07150e 100%);
+      border: 2px solid var(--amber-orange);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 
+        0 12px 28px rgba(0, 0, 0, 0.6),
+        inset 0 0 20px rgba(255, 102, 0, 0.25);
+      overflow: hidden;
+    }
+
+    /* Iniciales IG con tipografía de alto impacto y destello */
+    .avatar-initials {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 2.6rem;
+      font-weight: 800;
+      color: #ffffff;
+      background: linear-gradient(180deg, #ffffff 10%, #ff8c3a 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      letter-spacing: -2px;
+      user-select: none;
+    }
+
+    .avatar-image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: none;
+    }
+
+    /* Sección de Identidad Editorial */
+    .identity-section {
+      margin-bottom: 22px;
+      width: 100%;
+    }
+
+    .name {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 2rem;
+      font-weight: 700;
+      letter-spacing: -0.03em;
+      text-transform: uppercase;
+      color: #ffffff;
+      line-height: 1.1;
+      margin-bottom: 8px;
+    }
+
+    .role-badge {
+      display: inline-block;
+      font-family: 'Space Mono', monospace;
+      font-size: 0.78rem;
+      font-weight: 700;
+      color: var(--amber-orange-glow);
+      background: rgba(255, 102, 0, 0.12);
+      border: 1px solid rgba(255, 102, 0, 0.35);
+      padding: 5px 14px;
+      border-radius: var(--radius-sm);
+      margin-bottom: 14px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .quote-container {
+      position: relative;
+      padding: 0 10px;
+    }
+
+    .bio-quote {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 0.95rem;
+      font-weight: 400;
+      color: var(--text-light);
+      line-height: 1.55;
+      font-style: normal;
+      letter-spacing: 0.01em;
+    }
+
+    .bio-quote .highlight-slash {
+      color: var(--amber-orange);
+      font-weight: 700;
+      margin: 0 4px;
+    }
+
+    /* Botón Hero Principal: GUARDAR CONTACTO (.VCF) */
+    .save-contact-btn {
+      width: 100%;
+      padding: 16px 20px;
+      margin-bottom: 24px;
+      background: var(--amber-gradient);
+      color: #07150e;
+      border: none;
+      border-radius: var(--radius-md);
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 1.02rem;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      box-shadow: 
+        0 10px 28px -5px rgba(255, 102, 0, 0.45),
+        0 0 15px rgba(255, 102, 0, 0.2);
+      transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .save-contact-btn::after {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: linear-gradient(
+        60deg,
+        rgba(255, 255, 255, 0) 20%,
+        rgba(255, 255, 255, 0.35) 50%,
+        rgba(255, 255, 255, 0) 80%
+      );
+      transform: rotate(30deg);
+      animation: btnShimmer 5s infinite;
+    }
+
+    @keyframes btnShimmer {
+      0% { transform: translateX(-150%) rotate(30deg); }
+      20%, 100% { transform: translateX(150%) rotate(30deg); }
+    }
+
+    .save-contact-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 14px 34px -5px rgba(255, 102, 0, 0.6);
+      filter: brightness(1.08);
+    }
+
+    .save-contact-btn:active {
+      transform: translateY(1px);
+    }
+
+    /* Fila de Contacto Directo: WhatsApp, Llamar, Email */
+    .quick-actions-grid {
+      width: 100%;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+      margin-bottom: 24px;
+    }
+
+    .quick-action-card {
+      background: var(--item-bg);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: var(--radius-md);
+      padding: 14px 8px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      color: var(--text-white);
+      transition: all 0.22s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .quick-action-card .action-icon {
+      width: 42px;
+      height: 42px;
+      border-radius: var(--radius-sm);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 8px;
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      color: var(--amber-orange-glow);
+      transition: all 0.22s ease;
+    }
+
+    .quick-action-card.whatsapp .action-icon {
+      color: #25d366;
+      border-color: rgba(37, 211, 102, 0.3);
+      background: rgba(37, 211, 102, 0.1);
+    }
+
+    .quick-action-card.call .action-icon {
+      color: #38bdf8;
+      border-color: rgba(56, 189, 248, 0.3);
+      background: rgba(56, 189, 248, 0.1);
+    }
+
+    .quick-action-card.email .action-icon {
+      color: var(--amber-orange-glow);
+      border-color: rgba(255, 102, 0, 0.3);
+      background: rgba(255, 102, 0, 0.1);
+    }
+
+    .quick-action-card span {
+      font-family: 'Space Mono', monospace;
+      font-size: 0.74rem;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      color: var(--text-light);
+    }
+
+    .quick-action-card:hover {
+      background: var(--item-hover);
+      border-color: var(--border-subtle-hover);
+      transform: translateY(-3px);
+    }
+
+    .quick-action-card:hover .action-icon {
+      transform: scale(1.08);
+    }
+
+    /* Lista de Enlaces con Separadores y Estilo Editorial */
+    .links-editorial-list {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-bottom: 22px;
+    }
+
+    .link-editorial-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 14px 16px;
+      background: var(--item-bg);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: var(--radius-md);
+      text-decoration: none;
+      color: var(--text-white);
+      transition: all 0.22s ease;
+    }
+
+    .link-row-left {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-align: left;
+    }
+
+    .link-mono-num {
+      font-family: 'Space Mono', monospace;
+      font-size: 0.72rem;
+      color: var(--amber-orange);
+      font-weight: 700;
+      letter-spacing: -0.02em;
+    }
+
+    .link-title-group {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .link-main-title {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 0.94rem;
+      font-weight: 600;
+      color: #ffffff;
+      letter-spacing: 0.02em;
+    }
+
+    .link-sub-url {
+      font-family: 'Space Mono', monospace;
+      font-size: 0.72rem;
+      color: var(--text-muted);
+    }
+
+    .link-slash-indicator {
+      font-family: 'Space Mono', monospace;
+      font-size: 1.1rem;
+      color: var(--amber-orange);
+      font-weight: 700;
+      transition: transform 0.2s ease, color 0.2s ease;
+    }
+
+    .link-editorial-row:hover {
+      background: var(--item-hover);
+      border-color: var(--border-subtle-hover);
+      transform: translateX(4px);
+    }
+
+    .link-editorial-row:hover .link-slash-indicator {
+      transform: translateX(3px) scale(1.15);
+      color: #ffffff;
+    }
+
+    /* Pie de Tarjeta con Marca Editorial */
+    .card-footer {
+      width: 100%;
+      padding-top: 16px;
+      border-top: 1px dashed rgba(255, 102, 0, 0.25);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .footer-left {
+      font-family: 'Space Mono', monospace;
+      font-size: 0.68rem;
+      color: var(--text-muted);
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+
+    .footer-right {
+      font-family: 'Space Mono', monospace;
+      font-size: 0.68rem;
+      color: var(--amber-orange);
+      font-weight: 700;
+      letter-spacing: 0.08em;
+    }
+
+    /* Modal de Código QR */
+    .modal-backdrop {
+      position: fixed;
+      inset: 0;
+      background: rgba(5, 14, 9, 0.88);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      z-index: 100;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    .modal-backdrop.active {
+      display: flex;
+    }
+
+    .modal-content {
+      background: #091a11;
+      border: 1px solid var(--amber-orange);
+      border-radius: var(--radius-lg);
+      width: 100%;
+      max-width: 340px;
+      padding: 28px 22px;
+      text-align: center;
+      box-shadow: 
+        0 25px 60px rgba(0, 0, 0, 0.9),
+        0 0 35px rgba(255, 102, 0, 0.25);
+      position: relative;
+      animation: modalSlide 0.25s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    }
+
+    @keyframes modalSlide {
+      from { opacity: 0; transform: scale(0.92) translateY(15px); }
+      to { opacity: 1; transform: scale(1) translateY(0); }
+    }
+
+    .modal-close-btn {
+      position: absolute;
+      top: 14px;
+      right: 14px;
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      color: var(--text-light);
+      width: 32px;
+      height: 32px;
+      border-radius: var(--radius-sm);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+    }
+
+    .modal-close-btn:hover {
+      background: rgba(255, 102, 0, 0.25);
+      border-color: var(--amber-orange);
+      color: #fff;
+    }
+
+    .qr-container {
+      background: #ffffff;
+      padding: 14px;
+      border-radius: var(--radius-md);
+      display: inline-block;
+      margin: 16px auto;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+    }
+
+    .qr-container img {
+      display: block;
+      width: 190px;
+      height: 190px;
+    }
+
+    /* Notificación Toast Flotante */
+    .toast {
+      position: fixed;
+      bottom: 24px;
+      left: 50%;
+      transform: translateX(-50%) translateY(80px);
+      background: #0d2417;
+      color: #f8fafc;
+      border: 1px solid var(--amber-orange);
+      padding: 10px 18px;
+      border-radius: var(--radius-sm);
+      font-family: 'Space Mono', monospace;
+      font-size: 0.8rem;
+      letter-spacing: 0.04em;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.7);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      z-index: 200;
+      opacity: 0;
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+      pointer-events: none;
+    }
+
+    .toast.show {
+      transform: translateX(-50%) translateY(0);
+      opacity: 1;
+    }
+
+    @media (max-width: 380px) {
+      .card-container { padding: 26px 16px 20px; }
+      .name { font-size: 1.7rem; }
+      .quick-actions-grid { gap: 6px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Capas de fondo: Arte editorial y textura de cristal acanalado vertical -->
+  <div class="bg-artwork"></div>
+  <div class="fluted-overlay"></div>
+
+  <!-- Contenedor Principal de la Tarjeta Digital -->
+  <main class="card-container" id="tarjeta">
+    
+    <!-- Barra Superior: Encabezado técnico editorial y utilidades -->
+    <header class="card-header-bar">
+      <div class="editorial-tag">
+        <span>30 AÑOS</span>
+        <span class="slash">/</span>
+        <span>ACOMPAÑAMIENTO</span>
+      </div>
+      <div class="header-actions">
+        <!-- Compartir enlace -->
+        <button class="header-btn" id="btn-share" title="Compartir tarjeta" aria-label="Compartir enlace">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"></path>
+            <polyline points="16 6 12 2 8 6"></polyline>
+            <line x1="12" y1="2" x2="12" y2="15"></line>
+          </svg>
+        </button>
+        <!-- Abrir modal de Código QR -->
+        <button class="header-btn" id="btn-qr" title="Mostrar código QR" aria-label="Ver código QR">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="3" y="3" width="7" height="7"></rect>
+            <rect x="14" y="3" width="7" height="7"></rect>
+            <rect x="14" y="14" width="7" height="7"></rect>
+            <rect x="3" y="14" width="7" height="7"></rect>
+          </svg>
+        </button>
+      </div>
+    </header>
+
+    <!-- Avatar con Iniciales 'IG' y halo ámbar / verde bosque -->
+    <!-- NOTA PARA SUSTITUIR POR TU FOTO REAL:
+         1. Guarda tu foto como 'foto-itxaso.jpg' en esta carpeta.
+         2. En la etiqueta <img> pon src="foto-itxaso.jpg" y estilo style="display:block;".
+         3. En el <span> con 'IG' pon style="display:none;". -->
+    <div class="avatar-wrapper">
+      <div class="avatar-glow"></div>
+      <div class="avatar">
+        <span class="avatar-initials" id="avatar-initials">IG</span>
+        <img src="" alt="Itxaso Gurrea" class="avatar-image" id="avatar-photo">
+      </div>
+    </div>
+
+    <!-- Identidad Profesional -->
+    <section class="identity-section">
+      <h1 class="name">Itxaso Gurrea</h1>
+      <div class="role-badge">Coach ejecutiva y de vida</div>
+      <div class="quote-container">
+        <p class="bio-quote">
+          Treinta años acompañando tus cambios vitales y profesionales.
+        </p>
+      </div>
+    </section>
+
+    <!-- Botón Principal Destacado: Guardar Contacto (vCard .vcf) -->
+    <button class="save-contact-btn" id="btn-save-vcard">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"></path>
+        <circle cx="12" cy="7" r="4"></circle>
+        <polyline points="16 11 18 13 22 9"></polyline>
+      </svg>
+      <span>Guardar contacto</span>
+    </button>
+
+    <!-- Fila de Acciones Rápidas: WhatsApp / Llamar / Email -->
+    <section class="quick-actions-grid">
+      <!-- WhatsApp Directo -->
+      <a href="https://wa.me/34617308517?text=Hola%20Itxaso,%20te%20contacto%20desde%20tu%20tarjeta%20digital." target="_blank" rel="noopener noreferrer" class="quick-action-card whatsapp" id="btn-whatsapp">
+        <div class="action-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/>
+          </svg>
+        </div>
+        <span>WhatsApp</span>
+      </a>
+
+      <!-- Llamada Telefónica -->
+      <a href="tel:+34617308517" class="quick-action-card call" id="btn-call">
+        <div class="action-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+          </svg>
+        </div>
+        <span>Llamar</span>
+      </a>
+
+      <!-- Correo Electrónico -->
+      <a href="mailto:itxasogurrea@gamil.com?subject=Contacto%20desde%20tarjeta%20digital" class="quick-action-card email" id="btn-email">
+        <div class="action-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="2" y="4" width="20" height="16" rx="2"></rect>
+            <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+          </svg>
+        </div>
+        <span>Email</span>
+      </a>
+    </section>
+
+    <!-- Lista Editorial de Enlaces -->
+    <section class="links-editorial-list">
+      
+      <!-- Sitio Web -->
+      <a href="https://www.itxasocoach.com" target="_blank" rel="noopener noreferrer" class="link-editorial-row" id="link-web">
+        <div class="link-row-left">
+          <span class="link-mono-num">01 /</span>
+          <div class="link-title-group">
+            <span class="link-main-title">Sitio Web Oficial</span>
+            <span class="link-sub-url">www.itxasocoach.com</span>
+          </div>
+        </div>
+        <span class="link-slash-indicator">/</span>
+      </a>
+
+      <!-- LinkedIn -->
+      <a href="https://www.linkedin.com/in/itxasogurrea" target="_blank" rel="noopener noreferrer" class="link-editorial-row" id="link-linkedin">
+        <div class="link-row-left">
+          <span class="link-mono-num">02 /</span>
+          <div class="link-title-group">
+            <span class="link-main-title">LinkedIn</span>
+            <span class="link-sub-url">Perfil profesional</span>
+          </div>
+        </div>
+        <span class="link-slash-indicator">/</span>
+      </a>
+
+      <!-- Instagram -->
+      <a href="https://instagram.com/itxaso_gurrea" target="_blank" rel="noopener noreferrer" class="link-editorial-row" id="link-instagram">
+        <div class="link-row-left">
+          <span class="link-mono-num">03 /</span>
+          <div class="link-title-group">
+            <span class="link-main-title">Instagram</span>
+            <span class="link-sub-url">@itxaso_gurrea</span>
+          </div>
+        </div>
+        <span class="link-slash-indicator">/</span>
+      </a>
+
+    </section>
+
+    <!-- Pie de Tarjeta Editorial -->
+    <footer class="card-footer">
+      <span class="footer-left">ITXASO GURREA</span>
+      <span class="footer-right">1996 — 2026</span>
+    </footer>
+
+  </main>
+
+  <!-- Modal de Código QR -->
+  <div class="modal-backdrop" id="modal-qr">
+    <div class="modal-content">
+      <button class="modal-close-btn" id="btn-close-qr" aria-label="Cerrar modal">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+      <div class="editorial-tag" style="justify-content:center; margin-bottom: 8px;">
+        <span>QR CODE</span> <span class="slash">/</span> <span>ESCANEAR</span>
+      </div>
+      <p style="font-size:0.85rem; color: var(--text-muted); margin-bottom: 6px;">Apunta con la cámara de tu móvil para abrir esta tarjeta.</p>
+      
+      <div class="qr-container">
+        <img id="qr-image" src="" alt="Código QR de la tarjeta digital">
+      </div>
+
+      <button class="save-contact-btn" style="margin-bottom: 0; padding: 12px 16px; font-size: 0.9rem;" id="btn-qr-share">
+        <span>Compartir enlace</span>
+      </button>
+    </div>
+  </div>
+
+  <!-- Notificación Toast flotante -->
+  <div class="toast" id="toast-message">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#ff7d1a" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+      <polyline points="20 6 9 17 4 12"></polyline>
+    </svg>
+    <span id="toast-text">Enlace copiado al portapapeles</span>
+  </div>
+
+  <!-- JAVASCRIPT: Descarga de vCard, Compartir en Redes y Código QR -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      
+      const CONTACT_DATA = {
+        name: "Itxaso Gurrea",
+        firstName: "Itxaso",
+        lastName: "Gurrea",
+        title: "Coach ejecutiva y de vida",
+        org: "Itxaso Gurrea Coaching",
+        phone: "+34617308517",
+        email: "itxasogurrea@gamil.com",
+        website: "https://www.itxasocoach.com",
+        linkedin: "https://www.linkedin.com/in/itxasogurrea",
+        instagram: "https://instagram.com/itxaso_gurrea",
+        bio: "Treinta años acompañando tus cambios vitales y profesionales."
+      };
+
+      // 1. Descarga automática de vCard (.vcf)
+      const btnSaveVcard = document.getElementById('btn-save-vcard');
+      
+      btnSaveVcard.addEventListener('click', () => {
+        const vcardContent = [
+          "BEGIN:VCARD",
+          "VERSION:3.0",
+          `N:${CONTACT_DATA.lastName};${CONTACT_DATA.firstName};;;`,
+          `FN:${CONTACT_DATA.name}`,
+          `ORG:${CONTACT_DATA.org}`,
+          `TITLE:${CONTACT_DATA.title}`,
+          `NOTE:${CONTACT_DATA.bio}`,
+          `TEL;TYPE=CELL,VOICE;VALUE=uri:tel:${CONTACT_DATA.phone}`,
+          `EMAIL;TYPE=INTERNET,PREF:${CONTACT_DATA.email}`,
+          `URL;TYPE=WORK:${CONTACT_DATA.website}`,
+          `X-SOCIALPROFILE;type=linkedin:${CONTACT_DATA.linkedin}`,
+          `X-SOCIALPROFILE;type=instagram:${CONTACT_DATA.instagram}`,
+          "END:VCARD"
+        ].join("\r\n");
+
+        const blob = new Blob([vcardContent], { type: 'text/vcard;charset=utf-8;' });
+        const url = URL.createObjectURL(blob);
+        const downloadLink = document.createElement('a');
+        downloadLink.href = url;
+        downloadLink.setAttribute('download', 'Itxaso_Gurrea.vcf');
+        document.body.appendChild(downloadLink);
+        downloadLink.click();
+        document.body.removeChild(downloadLink);
+
+        setTimeout(() => URL.revokeObjectURL(url), 1500);
+
+        showToast("¡Contacto descargado! Ábrelo para guardar.");
+      });
+
+      // 2. Compartir tarjeta (Web Share API nativa o copiar enlace)
+      const btnShare = document.getElementById('btn-share');
+      const btnQrShare = document.getElementById('btn-qr-share');
+
+      function shareCard() {
+        const shareData = {
+          title: "Itxaso Gurrea | Tarjeta Digital",
+          text: "Itxaso Gurrea - Coach ejecutiva y de vida. Treinta años acompañando tus cambios vitales y profesionales.",
+          url: window.location.href
+        };
+
+        if (navigator.share) {
+          navigator.share(shareData).catch((err) => {
+            if (err.name !== 'AbortError') {
+              copyToClipboard(window.location.href);
+            }
+          });
+        } else {
+          copyToClipboard(window.location.href);
+        }
+      }
+
+      btnShare.addEventListener('click', shareCard);
+      btnQrShare.addEventListener('click', shareCard);
+
+      function copyToClipboard(text) {
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+          navigator.clipboard.writeText(text).then(() => {
+            showToast("Enlace copiado al portapapeles");
+          });
+        } else {
+          const textarea = document.createElement('textarea');
+          textarea.value = text;
+          document.body.appendChild(textarea);
+          textarea.select();
+          document.execCommand('copy');
+          document.body.removeChild(textarea);
+          showToast("Enlace copiado al portapapeles");
+        }
+      }
+
+      // 3. Modal de Código QR
+      const btnQr = document.getElementById('btn-qr');
+      const modalQr = document.getElementById('modal-qr');
+      const btnCloseQr = document.getElementById('btn-close-qr');
+      const qrImage = document.getElementById('qr-image');
+
+      function openQrModal() {
+        const currentUrl = encodeURIComponent(window.location.href);
+        qrImage.src = `https://api.qrserver.com/v1/create-qr-code/?size=300x300&margin=10&data=${currentUrl}`;
+        modalQr.classList.add('active');
+      }
+
+      function closeQrModal() {
+        modalQr.classList.remove('active');
+      }
+
+      btnQr.addEventListener('click', openQrModal);
+      btnCloseQr.addEventListener('click', closeQrModal);
+      
+      modalQr.addEventListener('click', (e) => {
+        if (e.target === modalQr) {
+          closeQrModal();
+        }
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && modalQr.classList.contains('active')) {
+          closeQrModal();
+        }
+      });
+
+      // 4. Toast Notificaciones
+      const toast = document.getElementById('toast-message');
+      const toastText = document.getElementById('toast-text');
+      let toastTimeout;
+
+      function showToast(message) {
+        toastText.textContent = message;
+        toast.classList.add('show');
+        clearTimeout(toastTimeout);
+        toastTimeout = setTimeout(() => {
+          toast.classList.remove('show');
+        }, 3000);
+      }
+
+    });
+  </script>
+</body>
+</html>
