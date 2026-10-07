@@ -24,24 +24,11 @@ Tarjeta de presentación web interactiva, moderna y optimizada para dispositivos
 
 ---
 
-## 🖼️ Cómo sustituir las iniciales "IG" por tu foto real
+## 🖼️ Foto de perfil
 
-En el archivo `index.html` (alrededor de la línea 320):
-
-1. Coloca tu archivo de fotografía (por ejemplo `foto-itxaso.jpg`) en la misma carpeta que `index.html`.
-2. Busca este bloque en `index.html`:
-   ```html
-   <div class="avatar">
-     <span class="avatar-initials" id="avatar-initials">IG</span>
-     <img src="" alt="Itxaso Gurrea" class="avatar-image" id="avatar-photo">
-   </div>
-   ```
-3. Cámbialo simplemente por:
-   ```html
-   <div class="avatar">
-     <img src="foto-itxaso.jpg" alt="Itxaso Gurrea" class="avatar-image" id="avatar-photo" style="display:block;">
-   </div>
-   ```
+La tarjeta ya tiene integrada tu fotografía oficial como `foto.jpg`. Si en el futuro deseas cambiarla por otra:
+1. Guarda la nueva imagen con el nombre `foto.jpg` en esta misma carpeta (reemplazando la existente).
+2. Haz `git add foto.jpg && git commit -m "update: nueva foto" && git push origin main`.
 
 ---
 
