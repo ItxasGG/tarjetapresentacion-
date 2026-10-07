@@ -121,36 +121,12 @@
       left: 16px;
       right: 16px;
       display: flex;
-      justify-content: space-between;
+      justify-content: flex-end;
       align-items: center;
       z-index: 2;
     }
 
-    .brand-logo-eye {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      background: rgba(0, 0, 0, 0.35);
-      backdrop-filter: blur(8px);
-      -webkit-backdrop-filter: blur(8px);
-      padding: 6px 12px;
-      border-radius: var(--radius-full);
-      border: 1px solid rgba(255, 255, 255, 0.25);
-    }
 
-    .brand-logo-eye img {
-      width: 22px;
-      height: auto;
-      filter: brightness(0) invert(1);
-    }
-
-    .brand-logo-eye span {
-      font-size: 0.72rem;
-      font-weight: 700;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      color: #ffffff;
-    }
 
     .toolbar-actions {
       display: flex;
@@ -587,13 +563,8 @@
       <img src="collage.jpg" alt="Comunicación y acompañamiento - Itxaso Gurrea">
       <div class="banner-overlay"></div>
       
-      <!-- Barra superior con emblema del ojo y botones de utilidad -->
+      <!-- Barra superior con botones de utilidad -->
       <div class="banner-toolbar">
-        <div class="brand-logo-eye">
-          <img src="perfil.png" alt="Logo">
-          <span>Itxaso Gurrea</span>
-        </div>
-        
         <div class="toolbar-actions">
           <button class="tool-btn" id="btn-share" title="Compartir tarjeta" aria-label="Compartir enlace">
             <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
