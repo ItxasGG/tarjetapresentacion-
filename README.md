@@ -15,6 +15,7 @@ Tarjeta de presentación web interactiva, moderna y optimizada para dispositivos
 
 3. **Enlaces Profesionales**:
    - Enlace directo al **Sitio Web Oficial**: [www.itxasocoach.com](https://www.itxasocoach.com)
+   - Comunidad y formación en **Academia Skool**: [skool.com/academia-itxaso-gurrea-7800/about](https://www.skool.com/academia-itxaso-gurrea-7800/about)
    - Acceso al perfil de **LinkedIn**: [linkedin.com/in/itxasogurrea](https://www.linkedin.com/in/itxasogurrea)
    - Perfil de **Instagram**: [@itxaso_gurrea](https://instagram.com/itxaso_gurrea)
 
