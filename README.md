@@ -11,7 +11,7 @@ Tarjeta de presentación web interactiva, moderna y optimizada para dispositivos
 2. **Acciones Rápidas Directas**:
    - **WhatsApp**: Abre chat directo con saludo preconfigurado al número `+34617308517`.
    - **Llamar**: Conecta la llamada directa `tel:+34617308517`.
-   - **Email**: Abre el gestor de correo listo para escribir a `itxasogurrea@gamil.com`.
+   - **Email**: Abre el gestor de correo listo para escribir a `itxasogurrea@gmail.com`.
 
 3. **Enlaces Profesionales**:
    - Enlace directo al **Sitio Web Oficial**: [www.itxasocoach.com](https://www.itxasocoach.com)
